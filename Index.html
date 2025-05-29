@@ -86,13 +86,32 @@
       color: #f3e8e8;
     }
 
-    /* Why I Choose - blur background image */
+    /* Why I Choose - new blur image background */
     .section-card.bg-image {
-      background-image: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)), url("images/bg why i choose.jpg");
+      background-image: url("images/device tools content creator.jpg");
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
+      position: relative;
+      overflow: hidden;
       box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    .section-card.bg-image::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      backdrop-filter: blur(5px);
+      background-color: rgba(255, 255, 255, 0.85);
+      z-index: 0;
+    }
+
+    .section-card.bg-image > * {
+      position: relative;
+      z-index: 1;
     }
 
     .section-card img {
@@ -185,7 +204,7 @@
   <!-- Navigation -->
   <nav>
     <a href="Index.html">Home</a>
-    <a href="About.html">Step By Step Guide</a>
+    <a href="Steps.html">Step By Step Guide</a>
     <a href="Inspiration.html">Inspiration & Resources</a>
     <a href="contact.html">Contact</a>
   </nav>
@@ -210,7 +229,7 @@
   <!-- Why I Choose This Path Section -->
   <section class="section">
     <div class="section-card bg-image">
-      <img src="images/bg why i choose.jpg" alt="Digital Creator Inspiration Image" />
+      <img src="images/device tools content creator.jpg" alt="Digital Creator Inspiration Image" />
       <div class="section-text">
         <h2>Why I Choose This Path</h2>
         <p>Have you ever watched a video or scrolled through a post that made you smile, think, or feel inspired? That’s the magic I want to create! ✨<br><br>As a digital content creator, I get to blend creativity, storytelling, and technology all in one exciting career. From editing videos to crafting the perfect social media post, every day is a chance to share impactful stories and connect meaningfully with others. 💡</p>
